@@ -1,0 +1,235 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/red-hat-display-v19-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/red-hat-display-v19-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/red-hat-display-v19-latin-900.woff2') format('woff2');
+}
+
+
+:root {
+
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --hover-color: hsl(245, 55%, 61%);
+  --shadow-color: hsla(223, 47%, 23%, 0.356);
+
+  /* font family  */
+
+  --font-family: 'Red Hat Display';
+
+  /* font-size */
+  --fs-big: 1.25rem;
+
+  --fs-paragraph: 14px;
+
+  /* font-weight */
+
+  --fw-900: 900;
+  --fw-700: 700;
+  --fw-500: 500;
+
+
+  /* spacing  */
+  --mar-pad-gap-large: 1.875rem;
+  --mar-pad-gap-10px: 0.625rem;
+  --mar-pad-gap-small: 0.4375rem;
+
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Pale-blue);
+  background-image: url(/order-summary/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: grid;
+  place-content: center;
+  font-family: var(--font-family);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-500);
+}
+
+
+.order-summary {
+  min-width: 17.5rem;
+  max-width: 20.625rem;
+  background-color: var(--Very-pale-blue);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 25px var(--shadow-color);
+}
+
+.order-summary .order-summary-image img {
+  border-radius: 15px 15px 0 0;
+}
+
+.order-summary .order-summary-content {
+  padding: var(--mar-pad-gap-large);
+  display: grid;
+  gap: var(--mar-pad-gap-10px);
+  grid-template-rows: repeat(4, auto);
+}
+
+.order-summary .order-summary-content .content-title {
+  font-size: var(--fs-big);
+  font-weight: var(--fw-900);
+}
+
+.order-summary .order-summary-content .order-desription {
+  color: var(--Desaturated-blue);
+  padding-bottom: var(--mar-pad-gap-10px);
+}
+
+.order-summary .order-summary-content .order-plan,
+.order-icon-name-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: row nowrap;
+  font-size: var(--fs-paragraph);
+  padding: var(--mar-pad-gap-small) 0;
+  background-color: var(--Very-pale-blue-pale-blue);
+  color: var(--Desaturated-blue);
+}
+
+.order-icon-name-plan img {
+  width: 2.25rem;
+  margin-right: var(--mar-pad-gap-10px);
+}
+
+span {
+  font-weight: var(--fw-900);
+  color: var(--Dark-blue);
+}
+
+a {
+  color: var(--Bright-blue);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+  transition: color .3s;
+}
+
+a:hover,
+a:focus {
+  color: var(--hover-color);
+}
+
+.order-summary .order-summary-content .buttons {
+  display: contents;
+}
+
+button {
+  border: 0;
+  padding: var(--mar-pad-gap-10px);
+  border-radius: 10px;
+  font-weight: var(--fw-700);
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+  background-color: var(--Very-pale-blue);
+
+  transition: color .3s ease, background-color .3s ease;
+}
+
+.colored {
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  box-shadow: 1px 1px 15px var(--shadow-color);
+  z-index: 2;
+}
+
+button:hover {
+  color: var(--Dark-blue);
+}
+
+.colored:hover {
+  background-color: var(--hover-color);
+  color: var(--Very-pale-blue);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
