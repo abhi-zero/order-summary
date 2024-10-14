@@ -118,7 +118,8 @@ body {
   height: 100vh;
   background-color: var(--Pale-blue);
   background-image: url(../images/pattern-background-desktop.svg);
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: grid;
   place-content: center;
   font-family: var(--font-family);
